@@ -2,7 +2,7 @@ package webdriver;
 
 import org.testng.annotations.Test;
 
-public class topic_11_array {
+public class Topic_11_Array {
 
     @Test
     public void BT_1_findMax(){

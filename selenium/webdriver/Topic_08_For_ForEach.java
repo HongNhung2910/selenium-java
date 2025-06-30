@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.Scanner;
 
-public class topic_08_for_forEach {
+public class Topic_08_For_ForEach {
     Scanner scanner= new Scanner(System.in);
     @Test
     public void BT_1(){

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.Scanner;
 
-public class topic_03_exe {
+public class Topic_03_Excercise {
    @Test
     public void BT_1(){
        int a=6;

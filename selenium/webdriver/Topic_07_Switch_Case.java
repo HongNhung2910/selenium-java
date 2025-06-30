@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.Scanner;
 
-public class topic_07_switch_case {
+public class Topic_07_Switch_Case {
     Scanner scanner= new Scanner(System.in);
 
     @Test

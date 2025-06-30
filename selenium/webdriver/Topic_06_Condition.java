@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import java.util.Scanner;
 
-public class Topic_06_condition {
+public class Topic_06_Condition {
     WebDriver drive;
     Scanner scanner= new Scanner(System.in);
    @Test
