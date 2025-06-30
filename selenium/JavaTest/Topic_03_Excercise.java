@@ -1,4 +1,4 @@
-package webdriver;
+package JavaTest;
 
 import org.testng.annotations.Test;
 
