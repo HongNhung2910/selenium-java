@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Topic_15_Selenium_Locator {
+public class Topic_15_Locator {
     WebDriver driver;
     @BeforeClass
     public void beforeClass(){
