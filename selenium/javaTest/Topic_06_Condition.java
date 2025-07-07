@@ -1,4 +1,4 @@
-package JavaTest;
+package javaTest;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;

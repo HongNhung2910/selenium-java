@@ -1,4 +1,4 @@
-package JavaTest;
+package javaTest;
 
 public class Topic_11_Object {
     int ID;

@@ -1,4 +1,4 @@
-package WebDriver;
+package webdriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -28,24 +28,24 @@ public class Topic_15_Selenium_Locator {
     @Test
     public void TC_02_Class()
     {
-    driver.findElement(By.className("validate-email"));
-    driver.findElement(By.className("validate-password"));
+        driver.findElement(By.className("validate-email"));
+        driver.findElement(By.className("validate-password"));
     }
     @Test
     public void TC_03_Name()
     {
-    driver.findElement(By.name("login[username]"));
-    driver.findElement(By.name("login[password]"));
-    driver.findElement(By.name("send"));
+        driver.findElement(By.name("login[username]"));
+        driver.findElement(By.name("login[password]"));
+        driver.findElement(By.name("send"));
     }
     @Test
     public void TC_04_TagName()
     {
-    int inputNumber=  driver.findElements(By.tagName("input")).size();
-    System.out.println("Số lượng thẻ input="+inputNumber);
+        int inputNumber=  driver.findElements(By.tagName("input")).size();
+        System.out.println("Số lượng thẻ input="+inputNumber);
 
-    int buttonNumber=  driver.findElements(By.tagName("button")).size();
-    System.out.println("Số lượng thẻ button="+buttonNumber);
+        int buttonNumber=  driver.findElements(By.tagName("button")).size();
+        System.out.println("Số lượng thẻ button="+buttonNumber);
     }
     @Test
     public void TC_05_LinkTest()
@@ -64,9 +64,9 @@ public class Topic_15_Selenium_Locator {
     @Test
     public void TC_06_Partial_LinkTest()
     {
-    driver.findElement(By.partialLinkText("ABOUT"));
-    driver.findElement(By.partialLinkText("ACCOUNT"));
-    driver.findElement(By.partialLinkText("Password?"));
+        driver.findElement(By.partialLinkText("ABOUT"));
+        driver.findElement(By.partialLinkText("ACCOUNT"));
+        driver.findElement(By.partialLinkText("Password?"));
     }
     @Test
     public void TC_07_Css()
