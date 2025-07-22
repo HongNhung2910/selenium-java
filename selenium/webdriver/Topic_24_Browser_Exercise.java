@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Topic_24_Browser_Excercise {
+public class Topic_24_Browser_Exercise {
     WebDriver driver;
 
     @BeforeClass
