@@ -65,6 +65,7 @@ public class Topic_24_Browser_Exercise {
 
     @AfterClass
     public void afterClass(){
+
         driver.quit();
     }
 }

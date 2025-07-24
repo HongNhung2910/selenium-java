@@ -162,6 +162,7 @@ public class Topic_24_Element_Exercise {
 
     @AfterClass
     public void afterClass(){
+
         driver.quit();
     }
 }
