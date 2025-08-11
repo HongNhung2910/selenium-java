@@ -27,13 +27,13 @@ public class Topic_28_Custom_Dropdown_PartII {
     public void TC01_JQuery() throws InterruptedException {
         driver.get("https://jqueryui.com/resources/demos/selectmenu/default.html");
 
-        SelectItemInSelectableDropdown("//span[@id='speed-button']","//ul[@id='speed-menu']/li/div","Faster");
+        selectItemInSelectableDropdown("//span[@id='speed-button']","//ul[@id='speed-menu']/li/div","Faster");
         Assert.assertEquals(driver.findElement(By.xpath("//span[@id='speed-button']/span[@class='ui-selectmenu-text']")).getText(),"Faster");
 
-        SelectItemInSelectableDropdown("//span[@id='number-button']","//ul[@id='number-menu']/li","5");
+        selectItemInSelectableDropdown("//span[@id='number-button']","//ul[@id='number-menu']/li","5");
         Assert.assertEquals(driver.findElement(By.xpath("//span[@id='number-button']/span[@class='ui-selectmenu-text']")).getText(),"5");
 
-        SelectItemInSelectableDropdown("//span[@id='salutation-button']","//ul[@id='salutation-menu']/li[@class='ui-menu-item']","Mrs.");
+        selectItemInSelectableDropdown("//span[@id='salutation-button']","//ul[@id='salutation-menu']/li[@class='ui-menu-item']","Mrs.");
         Assert.assertEquals(driver.findElement(By.xpath("//span[@id='salutation-button']/span[@class='ui-selectmenu-text']")).getText(),"Mrs.");
 
     }
@@ -41,10 +41,10 @@ public class Topic_28_Custom_Dropdown_PartII {
     @Test
     public void TC02_ReactJS() throws InterruptedException {
         driver.get("https://react.semantic-ui.com/maximize/dropdown-example-selection/");
-        SelectItemInSelectableDropdown("//div[@class='ui fluid selection dropdown']","//div[@class='visible menu transition']/div/span","Christian");
+        selectItemInSelectableDropdown("//div[@class='ui fluid selection dropdown']","//div[@class='visible menu transition']/div/span","Christian");
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class='ui fluid selection dropdown']")).getText(),"Christian");
 
-        SelectItemInSelectableDropdown("//div[@class='ui fluid selection dropdown']","//div[@class='visible menu transition']/div/span","Jenny Hess");
+        selectItemInSelectableDropdown("//div[@class='ui fluid selection dropdown']","//div[@class='visible menu transition']/div/span","Jenny Hess");
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class='ui fluid selection dropdown']")).getText(),"Jenny Hess");
 
     }
@@ -52,10 +52,10 @@ public class Topic_28_Custom_Dropdown_PartII {
     @Test
     public void TC03_VueJS() throws InterruptedException {
         driver.get("https://mikerodham.github.io/vue-dropdowns/");
-        SelectItemInSelectableDropdown("//li[@class='dropdown-toggle']","//ul[@class='dropdown-menu']/li/a","First Option");
+        selectItemInSelectableDropdown("//li[@class='dropdown-toggle']","//ul[@class='dropdown-menu']/li/a","First Option");
         Assert.assertEquals(driver.findElement(By.xpath("//li[@class='dropdown-toggle']")).getText(),"First Option");
 
-        SelectItemInSelectableDropdown("//li[@class='dropdown-toggle']","//ul[@class='dropdown-menu']/li/a","Third Option");
+        selectItemInSelectableDropdown("//li[@class='dropdown-toggle']","//ul[@class='dropdown-menu']/li/a","Third Option");
         Assert.assertEquals(driver.findElement(By.xpath("//li[@class='dropdown-toggle']")).getText(),"Third Option");
 
     }
@@ -64,10 +64,10 @@ public class Topic_28_Custom_Dropdown_PartII {
     public void TC04_Editable() throws InterruptedException {
         driver.get("https://react.semantic-ui.com/maximize/dropdown-example-search-selection/");
 
-        SelectItemEditableDropdown("//input[@class='search']","//div[@class='visible menu transition']//span","Albania");
+        selectItemEditableDropdown("//input[@class='search']","//div[@class='visible menu transition']//span","Albania");
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class='divider text']")).getText(),"Albania");
 
-        SelectItemEditableDropdown("//input[@class='search']","//div[@class='visible menu transition']//span","Bahamas");
+        selectItemEditableDropdown("//input[@class='search']","//div[@class='visible menu transition']//span","Bahamas");
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class='divider text']")).getText(),"Bahamas");
 
     }
@@ -76,18 +76,18 @@ public class Topic_28_Custom_Dropdown_PartII {
     public void TC05_FinPeace() throws InterruptedException {
         driver.get("https://sps.finpeace.vn/tools/sktccn");
         Thread.sleep(5000);
-        SelectItemEditableDropdown("//input[@id='job_id']","//div[@id='job_id_list']/following-sibling::div[@class='rc-virtual-list']//div[@class='ant-select-item-option-content']","Công nghệ thông tin");
+        selectItemEditableDropdown("//input[@id='job_id']","//div[@id='job_id_list']/following-sibling::div[@class='rc-virtual-list']//div[@class='ant-select-item-option-content']","Công nghệ thông tin");
         Assert.assertEquals(driver.findElement(By.xpath("//label[@title='Nghề nghiệp']/parent::div/following-sibling::div//span[@class='ant-select-selection-item']")).getText(),"Công nghệ thông tin");
 
-        SelectItemEditableDropdown("//input[@id='gender']","//div[@id='gender_list']/following-sibling::div[@class='rc-virtual-list']//div[@class='ant-select-item-option-content']","Nữ");
+        selectItemEditableDropdown("//input[@id='gender']","//div[@id='gender_list']/following-sibling::div[@class='rc-virtual-list']//div[@class='ant-select-item-option-content']","Nữ");
         Assert.assertEquals(driver.findElement(By.xpath("//label[@title='Giới tính']/parent::div/following-sibling::div//span[@class='ant-select-selection-item']")).getText(),"Nữ");
 
-        SelectItemEditableDropdown("//input[@id='married_status']","//div[@id='married_status_list']/following-sibling::div[@class='rc-virtual-list']//div[@class='ant-select-item-option-content']","Kết hôn, đã có con");
+        selectItemEditableDropdown("//input[@id='married_status']","//div[@id='married_status_list']/following-sibling::div[@class='rc-virtual-list']//div[@class='ant-select-item-option-content']","Kết hôn, đã có con");
         Assert.assertEquals(driver.findElement(By.xpath("//label[@title='Tình trạng hôn nhân']/parent::div/following-sibling::div//span[@class='ant-select-selection-item']")).getText(),"Kết hôn, đã có con");
     }
 
 
-    private void SelectItemInSelectableDropdown(String parentXpath, String childXpath, String expectedTextItem) throws InterruptedException {
+    private void selectItemInSelectableDropdown(String parentXpath, String childXpath, String expectedTextItem) throws InterruptedException {
         driver.findElement(By.xpath(parentXpath)).click();
         List <WebElement> allItems = new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions
                 .presenceOfAllElementsLocatedBy(By.xpath(childXpath)));
@@ -102,7 +102,7 @@ public class Topic_28_Custom_Dropdown_PartII {
         }
     }
 
-    private void SelectItemEditableDropdown(String editableXpath, String childXpath, String expectedTextItem) throws InterruptedException {
+    private void selectItemEditableDropdown(String editableXpath, String childXpath, String expectedTextItem) throws InterruptedException {
         driver.findElement(By.xpath(editableXpath)).clear();
         driver.findElement(By.xpath(editableXpath)).sendKeys(expectedTextItem);
         Thread.sleep(3000);
