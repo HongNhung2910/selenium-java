@@ -26,10 +26,12 @@ public class Topic_23_Element_Commands {
 
         //kiểm tra enable hoặc disable
         Assert.assertTrue(driver.findElement(By.cssSelector("")).isEnabled());
-        Assert.assertFalse(driver.findElement(By.cssSelector("")).isEnabled());
+        Assert.assertFalse(driver.findElement(By.cssSelector("")).isDisplayed());
+
 
         //Kiểm tra element hiển thị
         Assert.assertTrue(driver.findElement(By.cssSelector("")).isDisplayed());
+        Assert.assertFalse(driver.findElement(By.cssSelector("")).isDisplayed());
         Assert.assertFalse(driver.findElement(By.cssSelector("")).isDisplayed());
 
         //Kiểm tra element được chọn
