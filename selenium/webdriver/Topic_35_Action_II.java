@@ -92,14 +92,10 @@ public class Topic_35_Action_II {
         actions.pause(Duration.ofSeconds(2)).perform();
 
         Assert.assertTrue(driver.findElement(By.cssSelector("li.context-menu-icon-quit")).isDisplayed());
-
-
-
     }
 
     @AfterClass
     public void afterClass(){
-
         driver.quit();
     }
 

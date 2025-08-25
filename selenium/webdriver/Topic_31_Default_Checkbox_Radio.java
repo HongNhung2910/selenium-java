@@ -5,8 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -16,7 +14,6 @@ import java.time.Duration;
 import java.util.List;
 
 public class Topic_31_Default_Checkbox_Radio {
-    private static final Logger log = LoggerFactory.getLogger(Topic_31_Default_Checkbox_Radio.class);
     WebDriver driver;
     JavascriptExecutor jsExecutor;
 
@@ -52,7 +49,7 @@ public class Topic_31_Default_Checkbox_Radio {
         Assert.assertFalse(driver.findElement(towBarCheckbox).isEnabled());
         Assert.assertFalse(driver.findElement(towBarCheckbox).isSelected());
 
-    //CLick bỏ chọn
+        //CLick bỏ chọn
         if (driver.findElement(dualZoneCheckbox).isSelected()){
            driver.findElement(dualZoneCheckbox).click();
         }
@@ -140,14 +137,10 @@ public class Topic_31_Default_Checkbox_Radio {
         jsExecutor.executeScript("arguments[0].click();", driver.findElement(checkboxUser));
         Thread.sleep(2000);
         Assert.assertTrue(driver.findElement(checkboxUser).isSelected());
-
     }
-
-
 
     @AfterClass
     public void afterClass(){
-
         driver.quit();
     }
 

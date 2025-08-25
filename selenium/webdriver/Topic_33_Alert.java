@@ -16,7 +16,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
@@ -58,7 +57,7 @@ public class Topic_33_Alert {
         Assert.assertEquals(alert.getText(),"I am a JS Confirm");
         alert.dismiss();
 
-       Assert.assertEquals(driver.findElement(By.cssSelector("p#result")).getText(),"You clicked: Cancel");
+        Assert.assertEquals(driver.findElement(By.cssSelector("p#result")).getText(),"You clicked: Cancel");
 
     }
 
@@ -91,7 +90,6 @@ public class Topic_33_Alert {
 
         driver.findElement(By.cssSelector("input#small-searchterms")).sendKeys("Macbook");
         driver.findElement(By.xpath("//button[text()='Search']")).click();
-
     }
 
     @Test

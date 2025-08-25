@@ -8,8 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import javax.swing.*;
 import java.time.Duration;
 
 public class Topic_34_Action_I {
@@ -46,18 +44,14 @@ public class Topic_34_Action_I {
         //Hover vào
         actions.moveToElement(driver.findElement(By.xpath("//span[text()='Làm Đẹp - Sức Khỏe']"))).perform();
 
-
         //Click vào
         driver.findElement(By.xpath("//div[@class='fhs_column_stretch']//a[text()='Băng Keo Cá Nhân']")).click();
 
         Assert.assertTrue(driver.findElement(By.xpath("//ol[@class='breadcrumb']//strong[text()='Băng Keo Cá Nhân']")).isDisplayed());
-
-
     }
 
     @AfterClass
     public void afterClass(){
-
         driver.quit();
     }
 
