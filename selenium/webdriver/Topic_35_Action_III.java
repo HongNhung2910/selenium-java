@@ -5,8 +5,6 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -19,7 +17,7 @@ import java.nio.charset.Charset;
 import java.time.Duration;
 
 public class Topic_35_Action_III {
-    private static final Logger log = LoggerFactory.getLogger(Topic_35_Action_III.class);
+
     WebDriver driver;
     Actions actions;
     String projectPath = System.getProperty("user.dir");

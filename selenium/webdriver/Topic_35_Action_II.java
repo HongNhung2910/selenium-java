@@ -3,8 +3,6 @@ package webdriver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -14,7 +12,6 @@ import java.time.Duration;
 import java.util.List;
 
 public class Topic_35_Action_II {
-    private static final Logger log = LoggerFactory.getLogger(Topic_35_Action_II.class);
     WebDriver driver;
     Actions actions;
     String osName=System.getProperty("os.name");
