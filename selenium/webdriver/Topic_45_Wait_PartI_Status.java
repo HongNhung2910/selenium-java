@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Topic_45_Wait_Part1_Status {
+public class Topic_45_Wait_PartI_Status {
     WebDriver driver;
     WebDriverWait explicitWait;
 

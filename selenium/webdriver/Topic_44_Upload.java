@@ -15,13 +15,13 @@ import java.util.List;
 public class Topic_44_Upload {
     WebDriver driver;
     String uploadFilePath=System.getProperty("user.dir")+"\\uploadFiles\\";
-    String anh1="anh1.jpg";
-    String anh2="anh2.jpg";
-    String anh3="anh3.jpg";
+    String MountainFile="moutain.png";
+    String RiverFile="River.png";
+    String TreeFile="Tree.png";
 
-    String uploadAnh1Path= uploadFilePath+anh1;
-    String uploadAnh2Path= uploadFilePath+anh2;
-    String uploadAnh3Path= uploadFilePath+anh3;
+    String uploadMountainPath= uploadFilePath+MountainFile;
+    String uploadRiverPath= uploadFilePath+RiverFile;
+    String uploadTreePath= uploadFilePath+TreeFile;
 
     @BeforeClass
     public void beforeClass(){
@@ -37,14 +37,14 @@ public class Topic_44_Upload {
         By uploadFile= By.cssSelector("input[type='file']");
 
         //Tải file
-        driver.findElement(uploadFile).sendKeys(uploadAnh1Path);
-        driver.findElement(uploadFile).sendKeys(uploadAnh2Path);
-        driver.findElement(uploadFile).sendKeys(uploadAnh3Path);
+        driver.findElement(uploadFile).sendKeys(uploadMountainPath);
+        driver.findElement(uploadFile).sendKeys(uploadRiverPath);
+        driver.findElement(uploadFile).sendKeys(uploadTreePath);
         Thread.sleep(4000);
 
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+anh1+"']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+anh2+"']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+anh3+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+MountainFile+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+RiverFile+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+TreeFile+"']")).isDisplayed());
 
         //Click upload
         List<WebElement> startUploadButton= driver.findElements(By.cssSelector("table button.start"));
@@ -53,9 +53,9 @@ public class Topic_44_Upload {
             Thread.sleep(1000);
         }
 
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+anh1+"']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+anh2+"']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+anh3+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+MountainFile+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+RiverFile+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+TreeFile+"']")).isDisplayed());
     }
 
     @Test
@@ -65,12 +65,12 @@ public class Topic_44_Upload {
         By uploadFile= By.cssSelector("input[type='file']");
 
         //Tải file
-        driver.findElement(uploadFile).sendKeys(uploadAnh1Path +"\n"+ uploadAnh2Path + "\n"+ uploadAnh3Path);
+        driver.findElement(uploadFile).sendKeys(uploadMountainPath +"\n"+ uploadRiverPath + "\n"+ uploadTreePath);
         Thread.sleep(4000);
 
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+anh1+"']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+anh2+"']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+anh3+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+MountainFile+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+RiverFile+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='"+TreeFile+"']")).isDisplayed());
 
         //Click upload
         List<WebElement> startUploadButton= driver.findElements(By.cssSelector("table button.start"));
@@ -79,9 +79,9 @@ public class Topic_44_Upload {
             Thread.sleep(1000);
         }
 
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+anh1+"']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+anh2+"']")).isDisplayed());
-        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+anh3+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+MountainFile+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+RiverFile+"']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[text()='"+TreeFile+"']")).isDisplayed());
     }
 
     @Test

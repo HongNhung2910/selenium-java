@@ -12,7 +12,7 @@ import java.time.Duration;
 import java.util.Date;
 import java.util.List;
 
-public class Topic_45_Wait_Part2_FindElement {
+public class Topic_45_Wait_PartII_FindElement {
     WebDriver driver;
 
     @BeforeClass
