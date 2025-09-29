@@ -63,14 +63,14 @@ public class Topic_48_Wait_PartV_Explicit {
         // Chờ trong x giây để Date Picker hiển thị
         explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div#ctl00_ContentPlaceholder1_Panel1")));
 
-        // Wait cho text đc xuất hiện trong 30s
+        // CHờ cho text đc xuất hiện trong 30s
         Assert.assertTrue(explicitWait.until(ExpectedConditions.textToBe(By.cssSelector("span#ctl00_ContentPlaceholder1_Label1"),
                 "No Selected Dates to display.")));
 
-        // Wait cho element được phép click và sau đó sẽ click vào
+        // Chờ cho element được phép click và sau đó sẽ click vào
         explicitWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//td/a[text()='18']"))).click();
 
-        // Wait cho icon loading biến mất
+        // Chờ cho icon loading biến mất
         explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div:not([style = 'display:none;'])>div.raDiv")));
 
         // Chờ cho text được cập nhật lên trang
